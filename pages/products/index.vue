@@ -1,7 +1,6 @@
 <template>
-  <div class='index'>
-    Page index
-    
+  <div class='products'>
+    NOS PRODUITS
   </div>
 </template>
 
@@ -10,7 +9,7 @@
 </script>
 
 <style lang='scss' scoped>
-  .index{
-      
-  }
+    .products{
+        
+    }
 </style>

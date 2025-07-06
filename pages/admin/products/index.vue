@@ -1,7 +1,7 @@
 <template>
-    <div class='admin-products'>
-      <h1>Only Admin Access</h1>
-    </div>
+  <div class='admin-products'>
+    <h1>Only Admin Access</h1>
+  </div>
 </template>
 
 <script setup lang='ts'>

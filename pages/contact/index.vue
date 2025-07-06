@@ -1,8 +1,5 @@
 <template>
-  <div class='index'>
-    Page index
-    
-  </div>
+    <div class='contact'>CONTACT</div>
 </template>
 
 <script setup lang='ts'>
@@ -10,7 +7,5 @@
 </script>
 
 <style lang='scss' scoped>
-  .index{
-      
-  }
+    .contact{}
 </style>
