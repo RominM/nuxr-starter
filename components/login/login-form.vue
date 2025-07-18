@@ -10,13 +10,13 @@
     
     <p v-if="errorMessage" class="login-form__error">{{ errorMessage }}</p>
 
-    <button class="login-form__button" type="submit">Se connecter</button>
-    
+    <action-button label="connexion" title="connexion" :type="ButtonType.PRIMARY" @click="submit" fill/>
   </form>
 </template>
 
 <script setup lang='ts'>
 import { useAPI } from '~/composables/api/useApi'
+import { ButtonType } from '~/types/enum/global/button'
 
 const auth = useAdminStore()
 const router = useRouter()
@@ -45,12 +45,15 @@ async function submit() {
   .login-form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     width: 100%;
     max-width: 360px;
     &__label{
       display: flex;
       flex-direction: column;
+      width: 100%;
       font-size: 12px;
       color: $dark-text-secondary;
     }

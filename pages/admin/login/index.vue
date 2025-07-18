@@ -1,6 +1,6 @@
 <template>
   <div class="admin-login">
-    <login-module/>
+    <login-module />
   </div>
 </template>
 

@@ -1,16 +1,11 @@
 <template>
   <div class='products'>
     <!-- NOS PRODUITS -->
-
-    <action-button label="cta" :icon="iconTest1" :type="ButtonType.CTA" />
-    <action-button label="destructive" :icon="iconTest2" :type="ButtonType.DESTRUCTIVE" fill />
-    <action-button :icon="iconTest3" :type="ButtonType.FAB" />
-    <action-button label="primary" :icon="iconTest4" :type="ButtonType.PRIMARY" />
-    <action-button label="secondary" :icon="iconTest4" :type="ButtonType.SECONDARY" />
-    <action-button label="tertiary" :icon="iconTest4" :type="ButtonType.TERTIARY" />
-    <action-button label="primary" :type="ButtonType.PRIMARY" />
-    <action-button label="secondary" link="/" :type="ButtonType.SECONDARY" />
-    <action-button label="tertiary" :type="ButtonType.TERTIARY" />
+<ul>
+  <li v-for="product in products">
+    <product-card/>
+  </li>
+</ul>
   </div>
 </template>
 

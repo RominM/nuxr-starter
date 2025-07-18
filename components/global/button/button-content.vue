@@ -1,6 +1,6 @@
 <template>
   <p :class="['button-content', icon?.side ? `side--${icon.side}` : 'side--center']"> 
-    <span v-if="label">{{ label }}</span>
+    <span v-if="label" class="button-content__label">{{ label }}</span>
     <h-icon v-if="icon" :icon="icon.hugeicons" />
   </p>
 </template>
@@ -34,6 +34,10 @@ defineProps({
       &--right{
         flex-direction: row;
       }
+    }
+    &__label{
+      font-size: 14px;
+      text-transform: capitalize;
     }
   }
 </style>
