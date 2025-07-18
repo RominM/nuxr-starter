@@ -420,6 +420,16 @@
   resolved "https://registry.yarnpkg.com/@fastify/busboy/-/busboy-3.1.1.tgz#af3aea7f1e52ec916d8b5c9dcc0f09d4c060a3fc"
   integrity sha512-5DGmA8FTdB2XbDeEwc/5ZXBl6UbBAyBOOLlPuBnZ/N1SwdH9Ii+cOX3tBROlDgcTXxjOYnLMVoKk9+FXAw0CJw==
 
+"@hugeicons/core-free-icons@^1.0.14":
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/@hugeicons/core-free-icons/-/core-free-icons-1.0.14.tgz#f9b34e82f2d52bd2787562370afca9cf079667a9"
+  integrity sha512-0vY3lyMDZVgA+wBJHjuvOAx6y0Mg0cBgYNsHt8Rw5eAXZ0LqM3T3xwIrovEJ1TtusUwFPb7QUBi1Ubux4VhQJg==
+
+"@hugeicons/vue@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@hugeicons/vue/-/vue-1.0.3.tgz#a4cdb555013c7aab36d62b356c05a63a06bf6d3d"
+  integrity sha512-DF9A277Ej4Eahu11Hkd3v6V0eZ1NHWZWs9OOByJaxGekgG8q7DAbkhltIo3bqsoxVprxaKSX3Mmn5a2dyzLsHA==
+
 "@ioredis/commands@^1.1.1":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@ioredis/commands/-/commands-1.2.0.tgz#6d61b3097470af1fdbbe622795b8921d42018e11"

@@ -1,12 +1,6 @@
 <template>
   <div class="admin-login">
-    <h2>Connexion Admin</h2>
-    <form @submit.prevent="submit" class="admin-login__form">
-      <input v-model="username" placeholder="Utilisateur" required />
-      <input v-model="password" type="password" placeholder="Mot de passe" required />
-      <button type="submit">Se connecter</button>
-    </form>
-    <p v-if="errorMessage" style="color:red">{{ errorMessage }}</p>
+    <login-module/>
   </div>
 </template>
 
@@ -38,15 +32,10 @@ async function submit() {
 <style lang="scss" scoped>
 .admin-login {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
-  &__form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 30px /* height of nav */);
+  background-color: $dark-background;
 }
 </style>
