@@ -6,7 +6,6 @@
   <button v-else :class="['action-button', `type--${type}`, fill ? 'fill' : 'hug']" @click="$emit('click')">
     <button-content :label="label" :icon="icon"/>
   </button>
-
 </template>
 
 <script setup lang='ts'>
@@ -23,35 +22,40 @@ defineProps({
 </script>
 
 <style lang='scss' scoped>
-@mixin baseButton {
-  border: solid 1px;
-  padding: 8px 12px;
-  border-radius: 4px;
-  min-width: 120px
-
-}
-
 .action-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all .2s ease-in-out;
   &.fill {
     width: 100%;
   }
   &.hug {
     width: fit-content;
   }
+
   &.type {
     &--cta{
       @include baseButton();
       background-color: $success;
+      border-color: $success;
+      &:hover {
+        background-color: $success-hover;
+        border-color: $border;
+      }
     }
 
     &--destructive {
       @include baseButton();
-      background-color: $error;
+      background-color: $error-hover;
+      border-color: $error-hover;
+      &:hover {
+        background-color: $error;
+        border-color: $border;
+      }
     }
-    &--fab{
+
+    &--fab {
       min-width: none;
       padding: 17px;
       height: max-content;
@@ -59,6 +63,34 @@ defineProps({
       aspect-ratio: 1;
       border: solid 1px;
       border-radius: 50%;
+      &:hover {
+        transform: scale(1.03);
+        color: $primary-hover;
+      }
+    }
+
+    &--primary{
+      @include baseButton();
+      background-color: $primary;
+      border-color: $primary-hover;
+      &:hover{
+        background-color: $primary-hover;
+        border-color: $border;
+      }
+    }
+
+    &--secondary{
+      @include baseButton();
+      &:hover{
+        transform: translate(4px,-2px);
+      }
+    }
+
+    &--tertiary{
+      text-decoration: underline transparent;
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
 }
