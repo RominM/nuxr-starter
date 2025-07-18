@@ -2,7 +2,21 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  css: ['~/assets/scss/main.scss'],
+  css: [
+    '~/assets/scss/reset.scss',
+    '~/assets/scss/main.scss'
+  ],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+            @use "@/assets/scss/foundations/index.scss" as *;
+          `
+        }
+      }
+    }
+  },
   runtimeConfig: {
     ADMIN_USERNAME: process.env.ADMIN_USERNAME,
     ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,

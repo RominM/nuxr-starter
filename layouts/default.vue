@@ -10,7 +10,10 @@ import navbar from '~/components/navbar.vue'
 </script>
 
 <style lang='scss' scoped>
-    .default-layout{
-        
-    }
+  .default-layout{
+    max-width: 100%;
+    height: 100vh;
+    background-color: $dark-background;
+    color: $dark-text-primary;
+  }
 </style>

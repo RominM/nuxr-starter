@@ -31,5 +31,7 @@ const isLoggedIn = computed(() => auth.isLoggedIn)
     .navigation,
     .navigation__admin{
       display: flex;
+      justify-content: end;
+      gap: 10px;
     }
 </style>

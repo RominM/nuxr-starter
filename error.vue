@@ -1,13 +1,13 @@
 <template>
     <div class='error'>
         <h1>404</h1>  
-        <p>Oups, la page que vous cherchiez n'existe pas</p>
-        <button @click="goBack">Retour</button>
+        <p>Oups, la page que vous cherchez n'existe pas</p>
+        <call-to-action @click="backToHome" label="Accueil"/>
     </div>
 </template>
 
 <script setup lang='ts'>
-const goBack = () => {
+const backToHome = () => {
     window.history.back()
 }   
 </script>

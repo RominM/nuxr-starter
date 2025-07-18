@@ -12,6 +12,7 @@ defineProps({routes: {type: Array as PropType<RouteRecordNormalized[]>, required
 <style lang='scss' scoped>
   .nav-list{
     display: flex;
+    gap: 10px;
     list-style: none;
     margin: 0;
     padding: 0;
