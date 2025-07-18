@@ -1,7 +1,6 @@
-
-
 export enum iconSide {
   LEFT = 'left',
   RIGHT = 'right',
-  CENTER = 'center'
+  BOTTOM = 'bottom',
+  TOP = 'top'
 }

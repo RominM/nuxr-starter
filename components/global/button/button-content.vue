@@ -1,6 +1,6 @@
 <template>
-  <p :class="['button-content', icon?.side ? `side-${icon.side}` : 'side-center']"> 
-    <span>{{ label }}</span>
+  <p :class="['button-content', icon?.side ? `side--${icon.side}` : 'side--center']"> 
+    <span v-if="label">{{ label }}</span>
     <h-icon v-if="icon" :icon="icon.hugeicons" />
   </p>
 </template>
@@ -15,5 +15,25 @@ defineProps({
 </script>
 
 <style lang='scss' scoped>
-  .button-content{}
+  .button-content{
+    display: flex;
+    white-space: nowrap;
+    gap: 6px;
+    &.side{
+      &--top{
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+      &--bottom{
+        flex-direction: column;
+        align-items: center;
+      }
+      &--left{
+        flex-direction: row-reverse;
+      }
+      &--right{
+        flex-direction: row;
+      }
+    }
+  }
 </style>
