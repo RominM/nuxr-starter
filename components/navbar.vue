@@ -9,20 +9,13 @@
 </template>
 
 <script setup lang='ts'>
-const router = useRouter()
-const routes = router.getRoutes()
+import { useUtils } from '~/composables/global/useUtils'
+import { ERoute } from '~/types/enum/global/navigation'
+
 const auth = useAdminStore()
 
-const filteredRoutes = routes.filter(route => {
-  return (
-    route.meta?.showInNav !== false &&
-    !route.path.includes(':') &&
-    route.name !== undefined &&
-    route.path !== '/404'
-  )
-})
-const adminRoutes = filteredRoutes.filter(route => route.path.includes('/admin'))
-const userRoutes = filteredRoutes.filter(route => !route.path.includes('/admin'))
+const adminRoutes = useUtils().routes.includes([ERoute.ADMIN])
+const userRoutes = useUtils().routes.excludes([ERoute.ADMIN, ERoute.PRIVATE])
 
 const isLoggedIn = computed(() => auth.isLoggedIn)
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="private">
-    private
+    PRIVATE ROUTE
   </div>
 </template>
 
@@ -9,6 +9,5 @@
 
 <style scoped lang="scss">
 .private {
-  
 }
 </style>
