@@ -8,12 +8,11 @@
 import { useUtils } from '~/composables/global/useUtils';
 import { ERoute } from '~/types/enum/global/navigation';
 
-const userRoutes = useUtils().routes.excludes([ERoute.ADMIN, ERoute.PRIVATE])
+const userRoutes = useUtils().routes.excludes([ERoute.PRIVATE])
 </script>
 
 <style lang='scss' scoped>
-    .navigation,
-    .navigation__admin{
+    .navigation {
       display: flex;
       justify-content: end;
       gap: 10px;

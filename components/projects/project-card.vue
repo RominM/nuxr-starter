@@ -39,7 +39,7 @@ defineProps({
   &.hovered {
     transform: translateY(-30px);
     z-index: 0; 
-    margin-right: -50px;
+    margin-right: -30px;
   }
 }
 </style>
