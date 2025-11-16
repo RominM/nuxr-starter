@@ -47,8 +47,7 @@ function close() {
 <style scoped lang="scss">
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100dvw;
   height: 100dvh;
   background-color: rgba(0, 0, 0, 0.8);

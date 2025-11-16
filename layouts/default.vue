@@ -6,10 +6,31 @@
     <layout-content>
       <slot/>
     </layout-content>
+
+    <modal v-if="project" :is-open="isOpen" dismisable show-cross @update:isOpen="closeModal">
+      <project-modal :project="project" />
+    </modal>
   </div>
 </template>
 
 <script setup lang='ts'>
+import { useGlobalEvents } from '~/composables/global/useGlobalEvent';
+import { EGlobalEvent } from '~/types/enum/global/globalEvent';
+import type { TProject } from '~/types/type/project';
+
+useGlobalEvents().subscribeTo(EGlobalEvent.MODAL_PROJECT, (payload: TProject | undefined) => {
+  project.value = payload ?? null
+  isOpen.value = true
+})
+
+const isOpen = ref<boolean>(false)
+const project = ref<TProject | null>(null)
+
+function closeModal() {
+  project.value =  null
+  isOpen.value = false
+  useGlobalEvents().unsubscribeFrom(EGlobalEvent.MODAL_PROJECT,() => {})
+}
 </script>
 
 <style lang='scss' scoped>
