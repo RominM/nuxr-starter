@@ -60,15 +60,15 @@ function closeModal() {
     height: 66vh;
   }
   .medium {
-    bottom: -80px;
-    left: 120px;
+    bottom: -40px;
+    left: 200px;
     width: 40vh;
     height: 40vh;
   }
 
   .small {
-    top: 50%;
-    left: 45vh;
+    top: 40%;
+    left: 55vh;
     width: 13vh;
     height: 13vh;
   }
