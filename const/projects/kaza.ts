@@ -15,11 +15,11 @@ export const kaza: TProject = {
   picture: {
     src_s: "",
     src_m: "/images/medium/kaza-mobile.png",
-    src_l: "",
+    src_l: "/images/large/kaza-desktop.png",
     alt: 'Capture d’écran du projet Kaza mobile'
   },
   links: {
-    code: '',
-    website: '',
+    code: 'https://github.com/RominM/Kasa',
+    website: 'https://kasa-rm.netlify.app/',
   }
 }

@@ -61,7 +61,7 @@ function closeModal() {
   }
   .medium {
     bottom: -40px;
-    left: 200px;
+    left: 20%;
     width: 40vh;
     height: 40vh;
   }

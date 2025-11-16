@@ -15,11 +15,11 @@ export const space: TProject = {
   picture: {
     src_s: "",
     src_m: "/images/medium/space-mobile.png",
-    src_l: "",
+    src_l: "/images/large/space-desktop.png",
     alt: 'Capture d’écran du projet space mobile'
   },
   links: {
-    code: '',
-    website: '',
+    code: 'https://github.com/RominM/space-tourisme',
+    website: 'https://space-tourisme-rm.netlify.app/',
   }
 }

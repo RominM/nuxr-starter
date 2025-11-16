@@ -38,6 +38,7 @@ defineProps({
 
   &.hovered {
     transform: translateY(-30px);
+    transition-delay: 0.15s;
     z-index: 0; 
     margin-right: -30px;
   }

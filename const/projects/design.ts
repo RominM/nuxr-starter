@@ -15,11 +15,11 @@ export const design: TProject = {
   picture: {
     src_s: "",
     src_m: "/images/medium/figma-mobile.png",
-    src_l: "",
+    src_l: "/images/large/design-desktop.png",
     alt: 'Capture d’écran du projet design mobile'
   },
   links: {
     code: '',
-    website: '',
+    website: 'https://www.figma.com/design/EvWkunxsI5FdYregytIHfD/meet-artist?node-id=0-1&t=CbKQ9uEzgT3ph90r-1',
   }
 }

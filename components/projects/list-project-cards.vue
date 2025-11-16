@@ -25,8 +25,10 @@ defineProps({
 const hoveredIndex = ref<number | null>(null)
 
 function whileHovering(index: number, projectId: string) {
-  hoveredIndex.value = index
-  emit('focused-project', projectId)
+  setTimeout(() => {
+    hoveredIndex.value = index
+    emit('focused-project', projectId)
+  }, 150)
 }
 </script>
 
