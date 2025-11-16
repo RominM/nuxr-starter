@@ -17,5 +17,9 @@ export const vmc: TProject = {
     src_m: "/images/medium/vmc-mobile.png",
     src_l: "/images/large/vmc-desktop.png",
     alt: 'Capture d’écran du projet valuemycar mobile'
+  },
+  links: {
+    code: '',
+    website: 'https://valuemycar.fr/',
   }
 }

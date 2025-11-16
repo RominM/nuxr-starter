@@ -1,12 +1,14 @@
 <template>
   <div class="project-content-display">
-    <h2 class="project-content-display__name">{{ project.name }}</h2>
+    <div :class="{ variant }">
+      <h2 class="project-content-display__name" :class="{ variant }">{{ project.name }}</h2>
+      
+      <project-statistic :status="project.status" :level="project.level" :duration="project.duration" />
+    </div>
 
-    <project-statistic :status="project.status" :level="project.level" :duration="project.duration" />
+    <p class="project-content-display__description" :class="{ variant }">{{ project.description }}</p>
 
-    <p>{{ project.description }}</p>
-
-    <ul>
+    <ul v-if="!variant">
       <li v-for="(tech, index) in project.tech" :key="index">{{ tech }}</li>
     </ul>
   </div>
@@ -16,7 +18,8 @@
 import type { TProject } from '~/types/type/project';
 
 defineProps({
-  project: { type: Object as PropType<TProject>, required: true}
+  project: { type: Object as PropType<TProject>, required: true },
+  variant: { type: Boolean, default: false }
 })
 </script>
 
@@ -26,8 +29,32 @@ defineProps({
   flex-direction: column;
   gap: 20px;
   color: #000;
+  .variant {
+    display: flex;
+    align-items: center;
+  }
   &__name {
     text-align: center;
+    margin-bottom: 20px;
+    &.variant {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+
+  &__description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &.variant {
+      display: block;
+      -webkit-line-clamp: none;
+      -webkit-box-orient: unset;
+      overflow: visible;
+      text-overflow: unset;
+    }
   }
 }
 </style>

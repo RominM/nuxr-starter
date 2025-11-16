@@ -15,7 +15,11 @@ export const rommefy: TProject = {
   picture: {
     src_s: "",
     src_m: "/images/medium/romeefy-mobile.png",
-    src_l: "/images/large/romeefy-mobile.png",
+    src_l: "/images/large/romeefy-desktop.png",
     alt: 'Capture d’écran du projet romeefy'
+  },
+  links: {
+    code: 'https://github.com/RominM/romeefy/tree/main',
+    website: 'https://romeefy.netlify.app/',
   }
 }

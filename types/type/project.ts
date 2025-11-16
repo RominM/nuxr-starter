@@ -9,6 +9,12 @@ export type TProject = {
   duration: string
   tech: TTech[]
   picture: TPicture
+  links: TProjectLinks
+}
+
+export type TProjectLinks = {
+  code?: string,
+  website: string,
 }
 
 export type TTech = {

@@ -17,5 +17,9 @@ export const design: TProject = {
     src_m: "/images/medium/figma-mobile.png",
     src_l: "",
     alt: 'Capture d’écran du projet design mobile'
+  },
+  links: {
+    code: '',
+    website: '',
   }
 }

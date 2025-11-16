@@ -9,7 +9,7 @@
 
     </div>
 
-    <modal class="project-modal" :is-open="isOpen" dismisable show-cross @update:isOpen="isOpen = false">
+    <modal v-if="project" :is-open="isOpen" dismisable show-cross @update:isOpen="isOpen = false">
       <project-modal :project="project" />
     </modal>
   </div>
@@ -20,6 +20,7 @@ import { projects } from '~/const/projects';
 
 const focusProjectId = ref<string>(projects[0].id)
 const isOpen = ref<boolean>(false)
+
 const project = computed(() => projects.find(project => project.id === focusProjectId.value))
 </script>
 

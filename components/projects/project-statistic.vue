@@ -29,5 +29,8 @@ const setIcon = computed(() => iconMap[props.level])
 .project-statistic {
   display: flex;
   gap: 50px;
+  p{
+    display: flex;
+  }
 }
 </style>

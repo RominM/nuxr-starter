@@ -17,5 +17,9 @@ export const kaza: TProject = {
     src_m: "/images/medium/kaza-mobile.png",
     src_l: "",
     alt: 'Capture d’écran du projet Kaza mobile'
+  },
+  links: {
+    code: '',
+    website: '',
   }
 }
