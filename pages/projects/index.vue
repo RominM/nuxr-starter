@@ -1,5 +1,5 @@
 <template>
-  <div class="private">
+  <div class="projects">
     <div class="fake-bento">
       <carousel>
         <list-project-cards :projects="projects" @focused-project="focusProjectId = $event" @open-modal="isOpen = true"/>
@@ -24,18 +24,18 @@ const project = computed(() => projects.find(project => project.id === focusProj
 </script>
 
 <style scoped lang="scss">
-.private {
+.projects {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: #fff;
+  width: 100%;
 }
 
 .fake-bento {
   display: flex;
   flex-direction: column;
-  width: 750px;
+  // width: 750px;
   height: 100%;
 }
 

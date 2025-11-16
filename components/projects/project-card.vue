@@ -22,7 +22,7 @@ defineProps({
 .project-card {
   position: relative;
   width: 230px;
-  height: 320px;
+  height: 40dvh;
   border-radius: 14px;
   margin-right: -100px;
   box-shadow: -50px 10px 30px #000000ae;

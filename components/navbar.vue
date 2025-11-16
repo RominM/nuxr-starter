@@ -12,9 +12,10 @@ const userRoutes = useUtils().routes.excludes([ERoute.PRIVATE])
 </script>
 
 <style lang='scss' scoped>
-    .navigation {
-      display: flex;
-      justify-content: end;
-      gap: 10px;
-    }
+  .navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+  }
 </style>
