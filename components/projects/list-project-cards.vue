@@ -7,6 +7,7 @@
         :is-hovered="hoveredIndex === index"
         @hover="whileHovering(index, project.id)"
         @leave="hoveredIndex = null"
+        @click="emit('open-modal', project.id)"
       />
     </li>
   </ul>
@@ -15,7 +16,7 @@
 <script setup lang="ts">
 import type { TProject } from '~/types/type/project';
 
-const emit = defineEmits(['focused-project'])
+const emit = defineEmits(['focused-project', 'open-modal'])
 
 defineProps({
   projects: { type: Array as PropType<TProject[]>, required: true }
