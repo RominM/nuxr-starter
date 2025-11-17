@@ -8,9 +8,7 @@
 
     <p class="project-content-display__description" :class="{ variant }">{{ project.description }}</p>
 
-    <ul v-if="!variant">
-      <li v-for="(tech, index) in project.tech" :key="index">{{ tech }}</li>
-    </ul>
+    <tech-list v-if="!variant" :tech-list="project.tech" />
   </div>
 </template>
 
@@ -28,14 +26,17 @@ defineProps({
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 0 20px 20px;
   color: #000;
   .variant {
     display: flex;
     align-items: center;
+    gap: 50px;
   }
   &__name {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 32px;
     &.variant {
       text-align: left;
       margin-bottom: 0;
@@ -48,6 +49,8 @@ defineProps({
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: 300;
+
     &.variant {
       display: block;
       -webkit-line-clamp: none;

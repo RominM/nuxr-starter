@@ -9,8 +9,11 @@ export const rommefy: TProject = {
   level: ELevelProject.HIGHT,
   duration: '2 months',
   tech: [
-    { url: 'https://vuejs.org/', icon: 'vue-icon.svg' },
-    { url: 'https://nuxt.com/', icon: 'nuxt-icon.svg' }
+    { url: 'https://vuejs.org/', icon: '/images/small/nuxt.png' },
+    { url: 'https://vuejs.org/', icon: '/images/small/Sass.png' },
+    { url: 'https://nuxt.com/', icon: '/images/small/TypeScript.png' },
+    { url: 'https://nuxt.com/', icon: '/images/small/Git.png' },
+    { url: 'https://nuxt.com/', icon: '/images/small/GitHub.png' }
   ],
   picture: {
     src_s: "",

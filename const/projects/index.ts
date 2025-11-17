@@ -4,4 +4,4 @@ import { rommefy } from "./romeefy";
 import { space } from "./space";
 import { vmc } from "./vmc";
 
-export const projects = [rommefy, vmc, design, space, kaza]
+export const projects = [space, design, kaza, rommefy, vmc]

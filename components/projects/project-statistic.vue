@@ -29,8 +29,14 @@ const setIcon = computed(() => iconMap[props.level])
 .project-statistic {
   display: flex;
   gap: 50px;
-  p{
+  p {
     display: flex;
+    gap: 5px;
+    font-weight: 300;
+    span {
+      font-weight: 600;
+      text-transform: capitalize;
+    }
   }
 }
 </style>

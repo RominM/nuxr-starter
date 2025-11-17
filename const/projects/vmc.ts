@@ -9,8 +9,14 @@ export const vmc: TProject = {
   level: ELevelProject.HIGHT,
   duration: '3 years',
   tech: [
-    { url: 'https://vuejs.org/', icon: 'vue-icon.svg' },
-    { url: 'https://nuxt.com/', icon: 'nuxt-icon.svg' }
+    { url: 'https://vuejs.org/', icon: '/images/small/nuxt.png' },
+    { url: 'https://vuejs.org/', icon: '/images/small/Sass.png' },
+    { url: 'https://nuxt.com/', icon: '/images/small/TypeScript.png' },
+    { url: 'https://nuxt.com/', icon: '/images/small/Yarn.png' },
+    { url: 'https://nuxt.com/', icon: '/images/small/Docker.png' },
+    { url: 'https://nuxt.com/', icon: '/images/small/MongoDB.png' },
+    { url: 'https://nuxt.com/', icon: '/images/small/Git.png' },
+    { url: 'https://nuxt.com/', icon: '/images/small/GitLab.png' }
   ],
   picture: {
     src_s: "",

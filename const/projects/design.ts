@@ -9,8 +9,7 @@ export const design: TProject = {
   level: ELevelProject.HIGHT,
   duration: '1 Months',
   tech: [
-    { url: 'https://vuejs.org/', icon: 'vue-icon.svg' },
-    { url: 'https://nuxt.com/', icon: 'nuxt-icon.svg' }
+    { url: 'https://vuejs.org/', icon: '/images/small/Figma.png' },
   ],
   picture: {
     src_s: "",
