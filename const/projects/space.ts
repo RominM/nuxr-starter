@@ -18,7 +18,7 @@ export const space: TProject = {
   picture: {
     src_s: "",
     src_m: "/images/medium/space-mobile.png",
-    src_l: "/images/large/space-desktop.png",
+    src_l: ["/images/large/space/space-desktop_1.png","/images/large/space/space-desktop_2.png"],
     alt: 'Capture d’écran du projet space mobile'
   },
   links: {

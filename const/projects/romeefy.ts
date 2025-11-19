@@ -18,7 +18,12 @@ export const rommefy: TProject = {
   picture: {
     src_s: "",
     src_m: "/images/medium/romeefy-mobile.png",
-    src_l: "/images/large/romeefy-desktop.png",
+    src_l: [
+      "/images/large/romeefy/romeefy-desktop_1.png",
+      "/images/large/romeefy/romeefy-desktop_2.png",
+      "/images/large/romeefy/romeefy-desktop_3.png",
+      "/images/large/romeefy/romeefy-desktop_4.png"
+    ],
     alt: 'Capture d’écran du projet romeefy'
   },
   links: {

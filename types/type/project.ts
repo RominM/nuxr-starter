@@ -25,6 +25,6 @@ export type TTech = {
 export type TPicture = {
   src_s: string
   src_m: string
-  src_l: string
+  src_l: string[]
   alt: string
 }

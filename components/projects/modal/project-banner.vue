@@ -1,6 +1,15 @@
 <template>
   <div class="project-banner">
-    <img class="project-banner__img" :src="picture.src_l" :alt="picture.alt" />
+    <div class="slides">
+      <img
+        v-for="(img, i) in picture.src_l"
+        :key="img"
+        class="slide"
+        :src="img"
+        :alt="picture.alt"
+        :class="{ active: i === currentIndex }"
+      />
+    </div>
 
      <div class="project-banner--actions">
       <a :href="links.website" target="_blank">
@@ -24,68 +33,93 @@
 import { Cursor02Icon, SourceCodeSquareIcon } from '@hugeicons/core-free-icons';
 import type { TPicture, TProjectLinks } from '~/types/type/project';
 
-defineProps({
+const props = defineProps({
   links: { type: Object as PropType<TProjectLinks>, required: true },
   picture: { type: Object as PropType<TPicture>, required: true },
+})
+
+
+const currentIndex = ref<number>(0)
+let intervalId: number
+
+const duration = 4000
+
+onMounted(() => {
+  intervalId = window.setInterval(() => {
+    currentIndex.value =
+      (currentIndex.value + 1) % props.picture.src_l.length
+  }, duration)
+})
+
+onBeforeUnmount(() => {
+  clearInterval(intervalId)
 })
 </script>
 
 <style scoped lang="scss">
 .project-banner {
+  position: relative;
+  overflow: hidden;
+
+  .slides {
     position: relative;
+    width: 85vw;
+    height: 55vh;
+    border-radius: 20px;
     overflow: hidden;
-
-    &__img {
-      display: block;
-      width: 85vw;
-      height: 55vh;
-      object-fit: cover;
-      border-radius: 20px;
-      transition: 0.3s ease;
-    }
-
-    &--actions {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-      display: flex;
-      gap: 20px;
-      opacity: 0;
-      transition: 0.3s ease;
-      z-index: 2;
-      .cta {
-        width: 250px;
-      }
-
-      .visitng {
-        background-color: #6B4494;
-      }
-      .view-code {
-        background-color: #EB8744;
-      }
-    }
-
-    &::after {
-      content: '';
+    .slide {
       position: absolute;
       inset: 0;
-      border-radius: 20px;
-
-      background-color: rgba(0, 0, 0, 0);
-      transition: background-color 0.3s ease;
-      z-index: 1;
-    }
-
-    &:hover {
-      &::after {
-        background-color: rgba(0, 0, 0, 0.4);
-      }
-      .project-banner--actions {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.05);
+      opacity: 0;
+      transition: opacity 1.3s ease, transform 9s linear;
+      &.active {
         opacity: 1;
+        transform: scale(1.15);
       }
     }
   }
 
+  &--actions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: 2;
+    .cta {
+      width: 250px;
+    }
+    .visitng {
+      background-color: #6B4494;
+    }
+    .view-code {
+      background-color: #EB8744;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+    z-index: 1;
+  }
+
+  &:hover {
+    &::after {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    .project-banner--actions {
+      opacity: 1;
+    }
+  }
+}
 </style>
