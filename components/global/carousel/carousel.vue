@@ -65,7 +65,7 @@ const next = () => {
   cursor: pointer;
   z-index: 10;
   user-select: none;
-  transition: .3s;
+  transition: 0.3s;
   &:hover {
     color: #000;
     background-color: #ffffff33;

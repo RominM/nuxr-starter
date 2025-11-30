@@ -28,7 +28,7 @@ function whileHovering(index: number, projectId: string) {
   setTimeout(() => {
     hoveredIndex.value = index
     emit('focused-project', projectId)
-  }, 150)
+  }, 50)
 }
 </script>
 

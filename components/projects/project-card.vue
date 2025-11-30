@@ -24,10 +24,13 @@ defineProps({
   width: 230px;
   height: 40dvh;
   border-radius: 14px;
-  margin-right: -100px;
-  box-shadow: -50px 10px 30px #000000ae;
+  margin-right: -120px;
+  box-shadow: -25px 10px 30px #00000073;
   overflow: hidden;
   transition: all 0.3s ease;
+  transform-style: preserve-3d; 
+  transform: scale(0.9) perspective(800px) rotateY(35deg);
+  filter: drop-shadow(-2px 2px 2px rgba(0,0,0,0.5));
   cursor: pointer;
 
   &__img {
@@ -38,9 +41,34 @@ defineProps({
 
   &.hovered {
     transform: translateY(-30px);
-    transition-delay: 0.15s;
+    transition-delay: 0.08s;
     z-index: 0; 
+    transform: scale(1.1);
     margin-right: -30px;
+    &::before {
+      left: 150%;
+    }
+  }
+  &:hover {
+    transform: translateY(-25px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      110deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.35) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-20deg);
+    transition: 0.6s ease;
+    pointer-events: none;
   }
 }
 </style>
